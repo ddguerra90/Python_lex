@@ -1,17 +1,16 @@
 #https://www.dabeaz.com/ply/PLYTalk.pdf
-
 import ply.lex as lex
 
-tokens = [ 'NAME','NUMBER','PLUS','MINUS','MULTIPLICA','DIVIDE', 'EQUALS', 'JUMPLINE' ]
+tokens = [ 'NAME','NUMBER','PLUS','MINUS','TIMES','DIVIDE', 'EQUALS', 'JUMPLINE' ]
 
 t_ignore = ' \t'
-t_PLUS = r'SUM'
-t_MINUS = r'RES'
-t_MULTIPLICA = r'MULTI'
-t_DIVIDE = r'DIV'
+t_PLUS = r'\+'
+t_MINUS = r'-'
+t_TIMES = r'\*'
+t_DIVIDE = r'/'
 t_EQUALS = r'='
 t_JUMPLINE = r'\n'
-#t_NAME = r'[a-zA-Z_][a-zA-Z0-9_]*'
+t_NAME = r'[a-zA-Z_][a-zA-Z0-9_]*'
 
 
 def t_NUMBER(t):
@@ -26,7 +25,7 @@ def t_error(t):
 
 lex.lex() # Build the lexer
 
-entrada = open("Expresions.in","r")
+entrada = open("expresiones.in","r")
 exp = entrada.readlines()
 
 for i in range(0, len(exp)):    
