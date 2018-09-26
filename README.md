@@ -1,6 +1,6 @@
 # Ejercicio Lexer
 
-Ejercicio sobre estructuras de datos usando pilas y arboles. Ejercicio de expresiones usando colas y arboles, mediante la lectura y escriura de archivos. 
+Ejercicio sobre estructuras de datos usando lexer. Ejercicio de expresiones usando colas y arboles, mediante la lectura y escriura de archivos. 
 Requirements
 
     Python 2.7.14
